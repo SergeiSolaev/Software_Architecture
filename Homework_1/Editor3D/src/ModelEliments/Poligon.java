@@ -6,8 +6,5 @@ import java.util.List;
 import Stuff.Point3D;
 
 public class Poligon {
-    public Point3D points;
-    public Poligon () {
-        List<PoligonModel> poligonModels;
-    }
+    public List<Point3D> points = new ArrayList<Point3D>();
 }
