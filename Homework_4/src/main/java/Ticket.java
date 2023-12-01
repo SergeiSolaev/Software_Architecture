@@ -20,4 +20,24 @@ public class Ticket {
         this.place = place;
         this.roadNumber = roadNumber;
     }
+
+    public void setStartZone(int startZone) {
+        this.startZone = startZone;
+    }
+
+    public void setStopZone(int stopZone) {
+        this.stopZone = stopZone;
+    }
+
+    public void setLuggage(boolean luggage) {
+        isLuggage = luggage;
+    }
+
+    public int getPlace() {
+        return place;
+    }
+
+    public int getRoadNumber() {
+        return roadNumber;
+    }
 }

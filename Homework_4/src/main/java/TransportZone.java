@@ -6,4 +6,8 @@ public class TransportZone {
         this.id = id;
         this.remark = remark;
     }
+
+    public int getId() {
+        return id;
+    }
 }

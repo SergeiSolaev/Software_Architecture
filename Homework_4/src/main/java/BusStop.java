@@ -10,4 +10,6 @@ public class BusStop {
         this.attitude = attitude;
         this.latitude = latitude;
     }
+
+
 }

@@ -12,4 +12,17 @@ public class BusRoute {
         this.capacity = capacity;
         this.busStops = busStops;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+
+
+
+
 }
