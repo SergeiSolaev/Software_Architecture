@@ -8,27 +8,33 @@ import Fabric.*;
 public class App {
     public static void main(String[] args) throws Exception {
 
-       List<ItemGenerator> generators = new ArrayList<>();
-
-       generators.add(new GemGenerator());
-       generators.add(new GoldGenerator());
-       generators.add(new BronzeGenerator());
-       generators.add(new DiamondGenerator());
-       generators.add(new EmeraldGenerator());
-       generators.add(new PlatinumGenerator());
-       generators.add(new RubyGenerator());
-
        Random random = ThreadLocalRandom.current();
 
-       generators.get(0).openReward();
-       generators.get(1).openReward();
-       generators.get(1).openReward();
-       generators.get(1).openReward();
+       List<ItemGenerator> fabrics = initFabrics();
 
-       for (int i = 0; i < 50; i++) {
-           int index = random.nextInt(2,7);
-           generators.get(index).openReward();
-       }
+        for (int i = 0; i < 200; i++) {
+            int index = random.nextInt(fabrics.size());
+            fabrics.get(index).openReward();
+        }
+    }
 
+    public static  List<ItemGenerator> initFabrics() {
+
+
+        List<ItemGenerator> generators = new ArrayList<>();
+
+        generators.add(new GemGenerator());
+        for (int i = 0; i < 3; i++) {
+            generators.add(new GoldGenerator());
+        }
+        for (int i = 0; i < 10; i++) {
+            generators.add(new BronzeGenerator());
+            generators.add(new DiamondGenerator());
+            generators.add(new EmeraldGenerator());
+            generators.add(new RubyGenerator());
+            generators.add(new PlatinumGenerator());
+        }
+
+        return generators;
     }
 }
